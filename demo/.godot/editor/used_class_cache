@@ -1,0 +1,6 @@
+res://icon.svg::1746340310::0eed98577cbbf02f0bdc0f5c9f70465b::CompressedTexture2D
+res://node.gd::1746341572::b0eb0a637ed8cc292b7b6bdbbd11aae0::GDScript
+res://node.tscn::1746341729::f9d4187db7f1a49bfa8ad057d5c303b9::PackedScene,Node,GDExample
+res://gd_example.gd::1746341645::965ef8c5a06be1b9838cf8802f6286b6::GDScript
+res://GdExample.cs::1746342237::217f3d1703ab4e11a0a1c57600b9b580::CSharpScript
+res://bin/mod.gdextension::1741493066::cbe6ffcc3f53a0a23429837e95e8ae12::GDExtension

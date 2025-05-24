@@ -1,0 +1,5 @@
+/.git
+*.uid
+/.vs
+/godot-cpp
+/Backup

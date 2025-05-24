@@ -1,0 +1,204 @@
+diff a/src/gdexample.cpp b/src/gdexample.cpp	(rejected hunks)
+@@ -15,6 +15,7 @@
+ #include <godot_cpp/variant/utility_functions.hpp>
+ #include <godot_cpp/variant/variant.hpp> // 包含Math函数
+ #include <vector>
++#include <godot_cpp/classes/editor_interface.hpp>
+ 
+ using namespace godot;
+ 
+@@ -34,63 +35,65 @@
+ 	if (Engine::get_singleton()->is_editor_hint())
+ 	{
+ 		return; // 编辑器模式下不执行
++
+ 	}
+ 
+-	// if (godot::MultiMeshInstance2D *multi_mesh = get_node<godot::MultiMeshInstance2D>("MultiMeshInstance2D"))
+-	// {
+-	// 	if (godot::Ref<godot::MultiMesh> mesh = multi_mesh->get_multimesh(); mesh.is_valid())
+-	// 	{
+-	// 		int len = instances.size();
+-	// 		for (int i = 0; i < len; ++i)
+-	// 		{
+-	// 			if (instances[i].arrived)
+-	// 				continue;
+-
+-	// 			Vector2 dir = instances[i].target_pos - instances[i].current_pos;
+-	// 			// float distance = dir.length();
+-
+-	// 			// if (distance < 5.0f)
+-	// 			// { // 到达阈值
+-	// 			// 	instances[i].arrived = true;
+-	// 			// 	instances[i].velocity = Vector2(0, 0);
+-
+-	// 			// 	// 设置新的随机目标位置
+-	// 			// 	Rect2 viewport_rect = get_viewport_rect();
+-	// 			// 	instances[i].target_pos = Vector2(
+-	// 			// 		UtilityFunctions::randf() * viewport_rect.size.x,
+-	// 			// 		UtilityFunctions::randf() * viewport_rect.size.y);
+-	// 			// 	instances[i].arrived = false;
+-	// 			// 	continue;
+-	// 			// }
+-
+-	// 			// 更新位置
+-	// 			instances[i].current_pos += instances[i].velocity * delta;
+-				
+-
+-	// 			// 边界碰撞检测
+-	// 			Rect2 viewport_rect = get_viewport_rect();
+-	// 			Vector2 viewport_size = viewport_rect.size;
+-
+-	// 			// X轴边界反弹
+-	// 			if (instances[i].current_pos.x < 0 || instances[i].current_pos.x > viewport_size.x)
+-	// 			{
+-	// 				instances[i].velocity.x *= -1;
+-	// 				instances[i].current_pos.x = Math::clamp(instances[i].current_pos.x, 0.0f, viewport_size.x);
+-	// 			}
+-
+-	// 			// Y轴边界反弹
+-	// 			if (instances[i].current_pos.y < 0 || instances[i].current_pos.y > viewport_size.y)
+-	// 			{
+-	// 				instances[i].velocity.y *= -1;
+-	// 				instances[i].current_pos.y = Math::clamp(instances[i].current_pos.y, 0.0f, viewport_size.y);
+-	// 			}
+-
+-	// 			// 动态调整速度
+-	// 			// instances[i].velocity = (instances[i].target_pos - instances[i].current_pos).normalized() * 200.0;
+-	// 			mesh->set_instance_transform_2d(i, Transform2D(0.0, instances[i].current_pos));
+-	// 		}
+-	// 	}
+-	// }
++	if (godot::MultiMeshInstance2D* multi_mesh = get_node<godot::MultiMeshInstance2D>("MultiMeshInstance2D"))
++	{
++		godot::Ref<godot::MultiMesh> mesh = multi_mesh->get_multimesh();
++		if (mesh.is_valid())
++		{
++			int len = instances.size();
++			for (int i = 0; i < len; ++i)
++			{
++				if (instances[i].arrived)
++					continue;
++
++				Vector2 dir = instances[i].target_pos - instances[i].current_pos;
++				// float distance = dir.length();
++
++				// if (distance < 5.0f)
++				// { // 到达阈值
++				// 	instances[i].arrived = true;
++				// 	instances[i].velocity = Vector2(0, 0);
++
++					// 设置新的随机目标位置
++				// 	Rect2 viewport_rect = get_viewport_rect();
++				// 	instances[i].target_pos = Vector2(
++				// 		UtilityFunctions::randf() * viewport_rect.size.x,
++				// 		UtilityFunctions::randf() * viewport_rect.size.y);
++				// 	instances[i].arrived = false;
++				// 	continue;
++				// }
++
++				// 更新位置
++				instances[i].current_pos += instances[i].velocity * delta;
++
++
++				// 边界碰撞检测
++				Rect2 viewport_rect = get_viewport_rect();
++				Vector2 viewport_size = viewport_rect.size;
++
++				// X轴边界反弹
++				if (instances[i].current_pos.x < 0 || instances[i].current_pos.x > viewport_size.x)
++				{
++					instances[i].velocity.x *= -1;
++					instances[i].current_pos.x = Math::clamp(instances[i].current_pos.x, 0.0f, viewport_size.x);
++				}
++
++				// Y轴边界反弹
++				if (instances[i].current_pos.y < 0 || instances[i].current_pos.y > viewport_size.y)
++				{
++					instances[i].velocity.y *= -1;
++					instances[i].current_pos.y = Math::clamp(instances[i].current_pos.y, 0.0f, viewport_size.y);
++				}
++
++				// 动态调整速度
++				//instances[i].velocity = (instances[i].target_pos - instances[i].current_pos).normalized() * 200.0;
++				mesh->set_instance_transform_2d(i, Transform2D(0.0, instances[i].current_pos));
++			}
++		}
++	}
+ }
+ 
+ void GDExample::_process(double delta)
+@@ -122,40 +125,46 @@
+ 		return; // 编辑器模式下不执行
+ 	}
+ 	// 物理进程留空
+-	// tick(delta);
++	tick(delta);
+ }
+ 
+ void GDExample::_ready()
+ {
+-	// if (MultiMeshInstance2D *multi_mesh_instance = get_node<MultiMeshInstance2D>("MultiMeshInstance2D"); multi_mesh_instance != nullptr)
+-	// {
+-	// 	Ref<MultiMesh> multimesh = multi_mesh_instance->get_multimesh();
+-	// 	multimesh->set_instance_count(30000);
+-	// 	instances.resize(30000);
+-	// 	// 初始化实例数据
+-	// 	Rect2 viewport_rect = get_viewport_rect();
+-	// 	Vector2 viewport_size = viewport_rect.size;
+-	// 	for (int i = 0; i < 30000; i++)
+-	// 	{
+-	// 		// 随机初始位置和速度
+-	// 		// instances[i].current_pos = Vector2(
+-	// 		// 	UtilityFunctions::randf() * viewport_size.x,
+-	// 		// 	UtilityFunctions::randf() * viewport_size.y
+-	// 		// );
+-
+-	// 		instances[i].current_pos = Vector2(
+-	// 			(i % 50) * 10.0 - 500.0,
+-	// 			(i / 50) * 10.0 - 500.0);
+-
+-	// 		instances[i].velocity = Vector2(
+-	// 			UtilityFunctions::randf_range(-200.0, 200.0),
+-	// 			UtilityFunctions::randf_range(-200.0, 200.0));
+-	// 		// multimesh->set_instance_transform_2d(i, Transform2D(0.0, instances[i].current_pos));
+-	// 	}
+-	// }
++	MultiMeshInstance2D* multi_mesh_instance = get_node<MultiMeshInstance2D>("MultiMeshInstance2D");
++	if (multi_mesh_instance != nullptr)
++	{
++		Ref<MultiMesh> multimesh = multi_mesh_instance->get_multimesh();
++		multimesh->set_instance_count(10000);
++		instances.resize(10000);
++		auto len = multimesh->get_instance_count();
++		// 初始化实例数据
++		Rect2 viewport_rect = get_viewport_rect();
++		Vector2 viewport_size = viewport_rect.size;
++		for (int i = 0; i < len; i++)
++		{
++			// 随机初始位置和速度
++			// instances[i].current_pos = Vector2(
++			// 	UtilityFunctions::randf() * viewport_size.x,
++			// 	UtilityFunctions::randf() * viewport_size.y
++			// );
++
++			instances[i].current_pos = Vector2(
++				(i % 50) * 10.0 - 500.0,
++				(i / 50) * 10.0 - 500.0);
++
++			instances[i].velocity = Vector2(
++				UtilityFunctions::randf() * 400 - 200,
++				UtilityFunctions::randf() * 400 - 200);
++			//multimesh->set_instance_transform_2d(i, Transform2D(0.0, instances[i].current_pos));
++		}
++	}
+ }
+ 
+ void GDExample::a() {
+ 	String msg = U"你好";
+ 	UtilityFunctions::print(msg);
++	/*
++	EditorInterface* editorInterface = EditorInterface::get_singleton();
++	editorInterface->play_current_scene();
++	*/
+ }
