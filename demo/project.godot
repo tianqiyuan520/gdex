@@ -12,12 +12,16 @@ config_version=5
 
 config/name="GDEXTest"
 run/main_scene="uid://coalkdqs1oixl"
-config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [debug]
 
 settings/stdout/print_fps=true
+
+[display]
+
+window/vsync/vsync_mode=0
 
 [dotnet]
 

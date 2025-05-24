@@ -21,21 +21,28 @@ private:
 	double time_passed;
 	Vector2 target_position;
 	std::vector<InstanceData> instances;
+	bool IsUseBuffer = false;
 
 protected:
 	static void _bind_methods();
 
 public:
+	
 	GDExample();
 	~GDExample();
 
 	void _process(double delta) override;
 	void _ready() override;
 	void _physics_process(double delta) override;
-	void a();
+	void printChineseCharNU();
+	void printChineseCharU();
 	void _input_event(const Ref<InputEvent>& event);
 	void update_mesh_positions(Vector2 center);
+	void display(double delta);
+	void display2(double delta);
 	void tick(double delta);
+	void set_IsUseBuffer(bool v);
+	bool get_IsUseBuffer() const;
 };
 
 }

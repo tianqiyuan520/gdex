@@ -15,12 +15,17 @@
 #include <godot_cpp/variant/utility_functions.hpp>
 #include <godot_cpp/variant/variant.hpp> // 包含Math函数
 #include <vector>
+#include <godot_cpp/classes/rendering_server.hpp>
 
 using namespace godot;
 
 void GDExample::_bind_methods()
 {
-	ClassDB::bind_method(D_METHOD("a"), &GDExample::a);
+	ClassDB::bind_method(D_METHOD(U"输出中文字符非Unicode"), &GDExample::printChineseCharNU);
+	ClassDB::bind_method(D_METHOD(U"输出中文字符Unicode"), &GDExample::printChineseCharU);
+	ClassDB::bind_method(D_METHOD("set_IsUseBuffer","isUseBuffer"), &GDExample::set_IsUseBuffer);
+	ClassDB::bind_method(D_METHOD("get_IsUseBuffer"), &GDExample::get_IsUseBuffer);
+	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "IsUseBuffer"), "set_IsUseBuffer", "get_IsUseBuffer");
 }
 
 GDExample::GDExample() : time_passed(0.0) {}
@@ -28,6 +33,7 @@ GDExample::GDExample() : time_passed(0.0) {}
 GDExample::~GDExample()
 {
 }
+
 
 void GDExample::tick(double delta)
 {
@@ -47,7 +53,7 @@ void GDExample::tick(double delta)
 				if (instances[i].arrived)
 					continue;
 
-				Vector2 dir = instances[i].target_pos - instances[i].current_pos;
+				//Vector2 dir = instances[i].target_pos - instances[i].current_pos;
 				// float distance = dir.length();
 
 				// if (distance < 5.0f)
@@ -88,8 +94,72 @@ void GDExample::tick(double delta)
 
 				// 动态调整速度
 				// instances[i].velocity = (instances[i].target_pos - instances[i].current_pos).normalized() * 200.0;
+			}
+		}
+	}
+}
+
+void godot::GDExample::set_IsUseBuffer(bool v)
+{
+	IsUseBuffer = v;
+}
+
+bool godot::GDExample::get_IsUseBuffer() const
+{
+	return IsUseBuffer;
+}
+
+void GDExample::display(double delta)
+{
+	if (Engine::get_singleton()->is_editor_hint())
+	{
+		return; // 编辑器模式下不执行
+	}
+
+	if (godot::MultiMeshInstance2D* multi_mesh = get_node<godot::MultiMeshInstance2D>("MultiMeshInstance2D"))
+	{
+		godot::Ref<godot::MultiMesh> mesh = multi_mesh->get_multimesh();
+		if (mesh.is_valid())
+		{
+			int len = instances.size();
+			for (int i = 0; i < len; ++i)
+			{
+				if (instances[i].arrived)
+					continue;
 				mesh->set_instance_transform_2d(i, Transform2D(0.0, instances[i].current_pos));
 			}
+		}
+	}
+}
+
+void GDExample::display2(double delta)
+{
+	// 统一使用8个float的常量定义
+	const int GODOT_FLOATS_PER_INSTANCE = 8;
+	if (godot::MultiMeshInstance2D* multi_mesh = get_node<godot::MultiMeshInstance2D>("MultiMeshInstance2D"))
+	{
+		godot::Ref<godot::MultiMesh> mesh = multi_mesh->get_multimesh();
+		if (mesh.is_valid())
+		{
+			auto buffer = RenderingServer::get_singleton()->multimesh_get_buffer(mesh->get_rid());
+			auto instanceCount = mesh->get_instance_count();
+			for (int i = 0; i < instanceCount; i++)
+			{
+				auto person = instances[i];
+				float rotation = 0.0f;
+				float cosθ = Math::cos(rotation);
+				float sinθ = Math::sin(rotation);
+					int baseIndex = i * GODOT_FLOATS_PER_INSTANCE;
+					buffer[baseIndex] = cosθ;    // x.x
+					buffer[baseIndex + 1] = -sinθ;   // y.x
+					buffer[baseIndex + 2] = 0.0f;    // padding
+					buffer[baseIndex + 3] = person.current_pos[0]; // origin.x
+					buffer[baseIndex + 4] = sinθ;    // x.y
+					buffer[baseIndex + 5] = cosθ;    // y.y
+					buffer[baseIndex + 6] = 0.0f;    // padding
+					buffer[baseIndex + 7] = person.current_pos[1]; // origin.y
+			}
+			RenderingServer::get_singleton()->multimesh_set_buffer(mesh->get_rid(), buffer);
 		}
 	}
 }
@@ -122,8 +192,14 @@ void GDExample::_physics_process(double delta)
 	{
 		return; // 编辑器模式下不执行
 	}
-	// 物理进程留空
+	
 	tick(delta);
+	if (IsUseBuffer) {
+		display2(delta);
+	}
+	else {
+		display(delta);
+	}
 }
 
 void GDExample::_ready()
@@ -131,9 +207,10 @@ void GDExample::_ready()
 	MultiMeshInstance2D* multi_mesh_instance = get_node<MultiMeshInstance2D>("MultiMeshInstance2D");
 	if (multi_mesh_instance != nullptr)
 	{
+		int MaxCount = 50000;
 		Ref<MultiMesh> multimesh = multi_mesh_instance->get_multimesh();
-		multimesh->set_instance_count(20000);
-		instances.resize(20000);
+		multimesh->set_instance_count(MaxCount);
+		instances.resize(MaxCount);
 		auto len = multimesh->get_instance_count();
 		// 初始化实例数据
 		Rect2 viewport_rect = get_viewport_rect();
@@ -158,7 +235,12 @@ void GDExample::_ready()
 	}
 }
 
-void GDExample::a() {
-	String msg = U"你好";
+void GDExample::printChineseCharNU() {
+	String msg = "Hello World.你好，世界";
+	UtilityFunctions::print(msg);
+}
+
+void GDExample::printChineseCharU() {
+	String msg = U"Hello World.你好，世界";
 	UtilityFunctions::print(msg);
 }
