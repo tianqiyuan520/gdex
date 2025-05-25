@@ -1,14 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\godot\\gdex\\demo\\",
+  "WorkspaceRootPath": "D:\\godot\\Project\\gdex\\demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA6867E5-D9FA-47DB-93CC-63DDB8CFA33B}|GDEXTest.csproj|d:\\godot\\gdex\\demo\\addons\\gdextocs\\gdextocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA6867E5-D9FA-47DB-93CC-63DDB8CFA33B}|GDEXTest.csproj|solutionrelative:addons\\gdextocs\\gdextocs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA6867E5-D9FA-47DB-93CC-63DDB8CFA33B}|GDEXTest.csproj|d:\\godot\\gdex\\demo\\gdexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA6867E5-D9FA-47DB-93CC-63DDB8CFA33B}|GDEXTest.csproj|solutionrelative:gdexample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B528AE2-19E6-4138-8210-B206F4876D22}|GDEXTest.csproj|d:\\godot\\project\\gdex\\demo\\c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B528AE2-19E6-4138-8210-B206F4876D22}|GDEXTest.csproj|solutionrelative:c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,27 +23,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GdexToCS.cs",
-              "DocumentMoniker": "D:\\godot\\gdex\\demo\\addons\\GdexToCS\\GdexToCS.cs",
-              "RelativeDocumentMoniker": "addons\\GdexToCS\\GdexToCS.cs",
-              "ToolTip": "D:\\godot\\gdex\\demo\\addons\\GdexToCS\\GdexToCS.cs",
-              "RelativeToolTip": "addons\\GdexToCS\\GdexToCS.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAA1wBMAAAAJAAAAAAAAAA==",
+              "Title": "TestNodeNormal.cs",
+              "DocumentMoniker": "D:\\godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
+              "RelativeDocumentMoniker": "c_sharp\\TestNodeNormal.cs",
+              "ToolTip": "D:\\godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
+              "RelativeToolTip": "c_sharp\\TestNodeNormal.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAtwKgAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T08:08:01.513Z",
+              "WhenOpened": "2025-05-25T02:14:55.919Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GdExample.cs",
-              "DocumentMoniker": "D:\\godot\\gdex\\demo\\GdExample.cs",
-              "RelativeDocumentMoniker": "GdExample.cs",
-              "ToolTip": "D:\\godot\\gdex\\demo\\GdExample.cs",
-              "RelativeToolTip": "GdExample.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAkwCUAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-04T07:21:01.573Z"
             }
           ]
         }

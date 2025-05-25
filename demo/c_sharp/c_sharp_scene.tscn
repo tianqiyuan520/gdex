@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://uiqwuk5slaqx"]
+
+[ext_resource type="Script" uid="uid://ccy3yi6f4kqqa" path="res://c_sharp/TestNodeNormal.cs" id="1_ekud1"]
+[ext_resource type="Texture2D" uid="uid://ce3a11ytrld07" path="res://icon.svg" id="2_7fcgb"]
+[ext_resource type="Script" uid="uid://da3xd276iyt1" path="res://c_sharp/camera_move.cs" id="3_7fcgb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ekud1"]
+size = Vector2(15, -15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_7fcgb"]
+mesh = SubResource("QuadMesh_ekud1")
+physics_interpolation_quality = 1
+
+[node name="CSharpScene" type="Node"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 327)
+script = ExtResource("3_7fcgb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_right = 120.0
+offset_bottom = 31.0
+text = "UseBuffer:OFF"
+
+[node name="Node" type="Node2D" parent="." node_paths=PackedStringArray("button")]
+script = ExtResource("1_ekud1")
+button = NodePath("../CanvasLayer/Button")
+MeshInstanceCount = 20000
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="Node"]
+multimesh = SubResource("MultiMesh_7fcgb")
+texture = ExtResource("2_7fcgb")

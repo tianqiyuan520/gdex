@@ -25,7 +25,10 @@ void GDExample::_bind_methods()
 	ClassDB::bind_method(D_METHOD(U"输出中文字符Unicode"), &GDExample::printChineseCharU);
 	ClassDB::bind_method(D_METHOD("set_IsUseBuffer","isUseBuffer"), &GDExample::set_IsUseBuffer);
 	ClassDB::bind_method(D_METHOD("get_IsUseBuffer"), &GDExample::get_IsUseBuffer);
+	ClassDB::bind_method(D_METHOD("setMeshInstanceCount","MeshInstanceCount"), &GDExample::setMeshInstanceCount);
+	ClassDB::bind_method(D_METHOD("getMeshInstanceCount"), &GDExample::getMeshInstanceCount);
 	ADD_PROPERTY(PropertyInfo(Variant::BOOL, "IsUseBuffer"), "set_IsUseBuffer", "get_IsUseBuffer");
+	ADD_PROPERTY(PropertyInfo(Variant::INT, "MeshInstanceCount"), "setMeshInstanceCount", "getMeshInstanceCount");
 }
 
 GDExample::GDExample() : time_passed(0.0) {}
@@ -147,15 +150,15 @@ void GDExample::display2(double delta)
 			{
 				auto person = instances[i];
 				float rotation = 0.0f;
-				float cosθ = Math::cos(rotation);
-				float sinθ = Math::sin(rotation);
+				float cosX = Math::cos(rotation);
+				float sinX = Math::sin(rotation);
 					int baseIndex = i * GODOT_FLOATS_PER_INSTANCE;
-					buffer[baseIndex] = cosθ;    // x.x
-					buffer[baseIndex + 1] = -sinθ;   // y.x
+					buffer[baseIndex] = cosX;    // x.x
+					buffer[baseIndex + 1] = -sinX;   // y.x
 					buffer[baseIndex + 2] = 0.0f;    // padding
 					buffer[baseIndex + 3] = person.current_pos[0]; // origin.x
-					buffer[baseIndex + 4] = sinθ;    // x.y
-					buffer[baseIndex + 5] = cosθ;    // y.y
+					buffer[baseIndex + 4] = sinX;    // x.y
+					buffer[baseIndex + 5] = cosX;    // y.y
 					buffer[baseIndex + 6] = 0.0f;    // padding
 					buffer[baseIndex + 7] = person.current_pos[1]; // origin.y
 			}
@@ -204,10 +207,14 @@ void GDExample::_physics_process(double delta)
 
 void GDExample::_ready()
 {
+	if (Engine::get_singleton()->is_editor_hint())
+	{
+		return; // 编辑器模式下不执行
+	}
 	MultiMeshInstance2D* multi_mesh_instance = get_node<MultiMeshInstance2D>("MultiMeshInstance2D");
 	if (multi_mesh_instance != nullptr)
 	{
-		int MaxCount = 50000;
+		int MaxCount = MeshInstanceCount;
 		Ref<MultiMesh> multimesh = multi_mesh_instance->get_multimesh();
 		multimesh->set_instance_count(MaxCount);
 		instances.resize(MaxCount);
@@ -232,6 +239,9 @@ void GDExample::_ready()
 				UtilityFunctions::randf_range(-200.0, 200.0));
 			// multimesh->set_instance_transform_2d(i, Transform2D(0.0, instances[i].current_pos));
 		}
+		//
+		//auto flag = RenderingServer::MULTIMESH_TRANSFORM_2D;
+		//RenderingServer::get_singleton()->multimesh_allocate_data(multimesh->get_rid(), flag,RenderingServer::MULTIMESH_TRANSFORM_2D);
 	}
 }
 
@@ -243,4 +253,12 @@ void GDExample::printChineseCharNU() {
 void GDExample::printChineseCharU() {
 	String msg = U"Hello World.你好，世界";
 	UtilityFunctions::print(msg);
+}
+
+void GDExample::setMeshInstanceCount(int v) {
+	MeshInstanceCount = v;
+}
+
+int GDExample::getMeshInstanceCount() {
+	return MeshInstanceCount;
 }

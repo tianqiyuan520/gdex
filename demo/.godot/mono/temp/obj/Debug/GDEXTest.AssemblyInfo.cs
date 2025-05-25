@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GDEXTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bbcd2a34d71fb7a780837eb5b4f18e4bb7f0200")]
 [assembly: System.Reflection.AssemblyProductAttribute("GDEXTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GDEXTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

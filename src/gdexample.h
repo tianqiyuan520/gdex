@@ -22,6 +22,7 @@ private:
 	Vector2 target_position;
 	std::vector<InstanceData> instances;
 	bool IsUseBuffer = false;
+	int MeshInstanceCount = 1;
 
 protected:
 	static void _bind_methods();
@@ -43,6 +44,8 @@ public:
 	void tick(double delta);
 	void set_IsUseBuffer(bool v);
 	bool get_IsUseBuffer() const;
+	void setMeshInstanceCount(int v);
+	int getMeshInstanceCount();
 };
 
 }

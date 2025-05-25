@@ -1,1 +1,7 @@
-res://node.tscn
+res://c_sharp/c_sharp_scene.tscn
+res://GDEX/node.tscn
+res://addons/GdexToCS/GdexToCS.cs
+res://GDEX/GdExample.cs
+res://c_sharp/Test.cs
+res://c_sharp/TestNodeNormal.cs
+res://c_sharp/camera_move.cs
