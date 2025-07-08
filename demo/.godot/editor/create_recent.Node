@@ -1,3 +1,7 @@
+Label
+GPUParticles2D
+GPUParticles3D
+CPUParticles2D
 CanvasLayer
 Camera2D
 Button

@@ -6,9 +6,9 @@ public partial class TestNodeNormal : Node2D
 	private struct InstanceData
 	{
 		public Vector2 CurrentPos;
-		public Vector2 TargetPos;
+		//public Vector2 TargetPos;
 		public Vector2 Velocity;
-		public bool Arrived;
+		//public bool Arrived;
 	}
 
 	private InstanceData[] instances;
@@ -19,11 +19,14 @@ public partial class TestNodeNormal : Node2D
 	[Export]
 	public Button button;
 	[Export]
-	public int MeshInstanceCount = 10000;
+	public Button button2;
+
+	public int MeshInstanceCount = 1000000;
 
 	public override void _Ready()
 	{
 		button.Pressed += toggleIsUseBuffer;
+		button2.Pressed += ShowEntityInfo;
 		//
 		instances = new InstanceData[MeshInstanceCount];
 		multiMeshInstance = GetNode<MultiMeshInstance2D>("MultiMeshInstance2D");
@@ -31,45 +34,33 @@ public partial class TestNodeNormal : Node2D
 		if (multiMeshInstance?.Multimesh == null) return;
 
 		var multiMesh = multiMeshInstance.Multimesh;
-		multiMesh.InstanceCount = MeshInstanceCount;
+		//multiMesh.InstanceCount = MeshInstanceCount;
 
-		for (int i = 0; i < multiMesh.InstanceCount; i++)
+		for (int i = 0; i < MeshInstanceCount; i++)
 		{
-			instances[i].CurrentPos = new Vector2(
-				(i % 50) * 10.0f - 500.0f,
-				(i / 50) * 10.0f - 500.0f);
+			instances[i].CurrentPos = new Vector2(11, 11);
 
 			instances[i].Velocity = new Vector2(
-				(float)GD.RandRange(-200.0, 200.0),
-				(float)GD.RandRange(-200.0, 200.0));
+					(float)GD.RandRange(100.0, 200.0),
+					(float)GD.RandRange(-200.0, 200.0)
+					);
 
 			//multiMesh.SetInstanceTransform2D(i, new Transform2D(0.0f, instances[i].CurrentPos));
 		}
 
 		//
-		 //RenderingServer.MultimeshAllocateData(multiMesh.GetRid(), MaxCount, RenderingServer.MultimeshTransformFormat.Transform2D, false, false, true);
+		//RenderingServer.MultimeshAllocateData(multiMesh.GetRid(), MaxCount, RenderingServer.MultimeshTransformFormat.Transform2D, false, false, true);
+		//moveSystem = new() { viewportSize = viewportRect.Size };
+
 	}
 
-	private Vector2 tempDir = new Vector2();
-	private Vector2 tempTarget = new Vector2();
 
 	public override void _PhysicsProcess(double delta)
 	{
-		// if (Input.IsMouseButtonPressed(MouseButton.Left))
-		// {
-		// 	var mouseGlobal = GetGlobalMousePosition();
-		// 	// GD.Print("process_pos", mouseGlobal);
-
-		// 	for (int i = 0; i < instances.Length; i++)
-		// 	{
-		// 		instances[i].TargetPos = mouseGlobal;
-		// 		instances[i].Arrived = false;
-		// 	}
-		// }
 		tick(delta);
-		if(IsUseBuffer) Display2();
-		else Display();
 	}
+
+
 
 	public void tick(double delta)
 	{
@@ -78,69 +69,32 @@ public partial class TestNodeNormal : Node2D
 		// var multiMesh = multiMeshInstance.Multimesh;
 		var viewportSize = viewportRect.Size;
 		Span<InstanceData> instancesSpan = instances;
-
-		for (int i = 0; i < instancesSpan.Length; i++)
+        var start = DateTime.Now;
+        for (int i = 0; i < instancesSpan.Length; i++)
 		{
-			if (instancesSpan[i].Arrived)
-				continue;
+			ref var instance = ref instancesSpan[i];
 
-			var prevPos = instancesSpan[i].CurrentPos;
-			UpdateInstancePosition(ref instancesSpan[i], delta, viewportSize);
+            instance.CurrentPos += instance.Velocity * (float)delta;
 
-			if (prevPos != instancesSpan[i].CurrentPos)
-			{
-				// multiMesh.SetInstanceTransform2D(i, new Transform2D(0.0f, instances[i].CurrentPos));
-			}
-		}
-	}
+            if (instance.CurrentPos.X < 0 || instance.CurrentPos.X > viewportSize.X) instance.Velocity.X *= -1;
 
-	private void UpdateInstancePosition(ref InstanceData instance, double delta, Vector2 viewportSize)
+            if (instance.CurrentPos.Y < 0 || instance.CurrentPos.Y > viewportSize.Y) instance.Velocity.Y *= -1;
+
+        }
+        var end = DateTime.Now;
+        DisplaySprites();
+        var end2 = DateTime.Now;
+        if (Engine.GetPhysicsFrames() % 30 == 0)
+        {
+            GD.Print($"逻辑耗时:{(end - start).TotalMilliseconds}ms");
+            GD.Print($"渲染耗时:{(end2 - end).TotalMilliseconds}ms");
+        }
+    }
+
+
+
+	public void DisplaySprites()
 	{
-		tempDir = instance.TargetPos - instance.CurrentPos;
-		float distance = tempDir.Length();
-
-		// if (distance < 5.0f)
-		// {
-		// 	instance.Arrived = true;
-		// 	instance.Velocity = Vector2.Zero;
-
-		// 	tempTarget.X = (float)GD.Randf() * viewportSize.X;
-		// 	tempTarget.Y = (float)GD.Randf() * viewportSize.Y;
-		// 	instance.TargetPos = tempTarget;
-		// 	instance.Arrived = false;
-		// 	return;
-		// }
-
-		instance.CurrentPos += instance.Velocity * (float)delta;
-
-		if (instance.CurrentPos.X < 0 || instance.CurrentPos.X > viewportSize.X)
-		{
-			instance.Velocity.X *= -1;
-			instance.CurrentPos.X = Mathf.Clamp(instance.CurrentPos.X, 0.0f, viewportSize.X);
-		}
-
-		if (instance.CurrentPos.Y < 0 || instance.CurrentPos.Y > viewportSize.Y)
-		{
-			instance.Velocity.Y *= -1;
-			instance.CurrentPos.Y = Mathf.Clamp(instance.CurrentPos.Y, 0.0f, viewportSize.Y);
-		}
-
-		// tempDir = instance.TargetPos - instance.CurrentPos;
-		// instance.Velocity = tempDir.Normalized() * 200.0f;
-	}
-
-	public void Display()
-	{
-		if (multiMeshInstance?.Multimesh == null) return;
-		var multiMesh = multiMeshInstance.Multimesh;
-		Span<InstanceData> instancesSpan = instances;
-		for (int i = 0; i < instancesSpan.Length; i++)
-		{
-			multiMesh.SetInstanceTransform2D(i, new Transform2D(0.0f, instancesSpan[i].CurrentPos));
-		}
-	}
-
-	public void Display2(){
 		multiMeshInstance = GetNode<MultiMeshInstance2D>("MultiMeshInstance2D");
 		if (multiMeshInstance?.Multimesh == null) return;
 		var multiMesh = multiMeshInstance.Multimesh;
@@ -156,16 +110,16 @@ public partial class TestNodeNormal : Node2D
 			float cosX = Mathf.Cos(rotation);
 			float sinX = Mathf.Sin(rotation);
 
-				int baseIndex = i * GODOT_FLOATS_PER_INSTANCE;
-				// 根据最新格式要求填充 (x.x, y.x, padding, origin.x, x.y, y.y, padding, origin.y)
-				buffer[baseIndex] = cosX;    // x.x
-				buffer[baseIndex + 1] = -sinX;   // y.x
-				buffer[baseIndex + 2] = 0.0f;    // padding
-				buffer[baseIndex + 3] = person.CurrentPos[0]; // origin.x
-				buffer[baseIndex + 4] = sinX;    // x.y
-				buffer[baseIndex + 5] = cosX;    // y.y
-				buffer[baseIndex + 6] = 0.0f;    // padding
-				buffer[baseIndex + 7] = person.CurrentPos[1]; // origin.y
+			int baseIndex = i * GODOT_FLOATS_PER_INSTANCE;
+			// 根据最新格式要求填充 (x.x, y.x, padding, origin.x, x.y, y.y, padding, origin.y)
+			buffer[baseIndex] = cosX;    // x.x
+			buffer[baseIndex + 1] = -sinX;   // y.x
+			buffer[baseIndex + 2] = 0.0f;    // padding
+			buffer[baseIndex + 3] = person.CurrentPos[0]; // origin.x
+			buffer[baseIndex + 4] = sinX;    // x.y
+			buffer[baseIndex + 5] = cosX;    // y.y
+			buffer[baseIndex + 6] = 0.0f;    // padding
+			buffer[baseIndex + 7] = person.CurrentPos[1]; // origin.y
 		}
 		try
 		{
@@ -183,11 +137,22 @@ public partial class TestNodeNormal : Node2D
 	public void toggleIsUseBuffer()
 	{
 		IsUseBuffer = !IsUseBuffer;
-		if(IsUseBuffer){
+		if (IsUseBuffer)
+		{
 			button.Text = "UseBuffer:ON";
 		}
-		else{
+		else
+		{
 			button.Text = "UseBuffer:OFF";
+		}
+	}
+
+	public void ShowEntityInfo()
+	{
+		Span<InstanceData> instancesSpan = instances;
+		for (int i = 0; i < 100; i++)
+		{
+			GD.Print(i,"/", MeshInstanceCount, " ",instancesSpan[i].CurrentPos);
 		}
 	}
 }

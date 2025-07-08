@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\godot\\Project\\gdex\\demo\\",
+  "WorkspaceRootPath": "D:\\Godot\\Project\\gdex\\demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B528AE2-19E6-4138-8210-B206F4876D22}|GDEXTest.csproj|d:\\godot\\project\\gdex\\demo\\c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B528AE2-19E6-4138-8210-B206F4876D22}|GDEXTest.csproj|solutionrelative:c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|d:\\godot\\project\\gdex\\demo\\c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|solutionrelative:c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|d:\\godot\\project\\gdex\\demo\\c_sharp\\testnodenormal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|solutionrelative:c_sharp\\testnodenormal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +18,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{da7e21aa-da94-452d-8aa1-d1b23f73f576}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:283709:0:{1a46fd64-28d5-0019-8eb3-17a02d419b53}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestNodeNormal2.cs",
+              "DocumentMoniker": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal2.cs",
+              "RelativeDocumentMoniker": "c_sharp\\TestNodeNormal2.cs",
+              "ToolTip": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal2.cs",
+              "RelativeToolTip": "c_sharp\\TestNodeNormal2.cs",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAAEoAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T08:49:23.887Z",
+              "EditorCaption": ""
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TestNodeNormal.cs",
-              "DocumentMoniker": "D:\\godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
+              "DocumentMoniker": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
               "RelativeDocumentMoniker": "c_sharp\\TestNodeNormal.cs",
-              "ToolTip": "D:\\godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
+              "ToolTip": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
               "RelativeToolTip": "c_sharp\\TestNodeNormal.cs",
-              "ViewState": "AgIAAJkAAAAAAAAAAAAtwKgAAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T02:14:55.919Z",
               "EditorCaption": ""
