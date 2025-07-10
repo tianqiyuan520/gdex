@@ -21,24 +21,16 @@ script = ExtResource("3_7fcgb")
 
 [node name="Button" type="Button" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_right = 0.104167
-anchor_bottom = 0.0478395
-text = "UseBuffer:OFF"
-metadata/_edit_use_anchors_ = true
-
-[node name="Button2" type="Button" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.141493
-anchor_right = 0.24566
+anchor_left = 0.0243056
+anchor_right = 0.128473
 anchor_bottom = 0.0478395
 text = "show
 "
 metadata/_edit_use_anchors_ = true
 
-[node name="Node" type="Node2D" parent="." node_paths=PackedStringArray("button", "button2")]
+[node name="Node" type="Node2D" parent="." node_paths=PackedStringArray("button")]
 script = ExtResource("2_q7811")
 button = NodePath("../CanvasLayer/Button")
-button2 = NodePath("../CanvasLayer/Button2")
 
 [node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="Node"]
 multimesh = SubResource("MultiMesh_7fcgb")

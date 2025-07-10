@@ -57,8 +57,3 @@ scroll_down={
 [physics]
 
 3d/run_on_separate_thread=true
-
-[rendering]
-
-renderer/rendering_method="gl_compatibility"
-renderer/rendering_method.mobile="gl_compatibility"

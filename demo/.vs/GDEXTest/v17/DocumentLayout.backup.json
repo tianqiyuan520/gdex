@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|d:\\godot\\project\\gdex\\demo\\c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|solutionrelative:c_sharp\\testnodenormal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|d:\\godot\\project\\gdex\\demo\\c_sharp\\testnodenormal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67FED9D9-1469-4366-867B-567DD08A6BB5}|GDEXTest.csproj|solutionrelative:c_sharp\\testnodenormal2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,28 +42,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TestNodeNormal2.cs",
-              "DocumentMoniker": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal2.cs",
-              "RelativeDocumentMoniker": "c_sharp\\TestNodeNormal2.cs",
-              "ToolTip": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal2.cs",
-              "RelativeToolTip": "c_sharp\\TestNodeNormal2.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAAAEoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-14T08:49:23.887Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "TestNodeNormal.cs",
               "DocumentMoniker": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
               "RelativeDocumentMoniker": "c_sharp\\TestNodeNormal.cs",
               "ToolTip": "D:\\Godot\\Project\\gdex\\demo\\c_sharp\\TestNodeNormal.cs",
               "RelativeToolTip": "c_sharp\\TestNodeNormal.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAAAJkAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T02:14:55.919Z",
+              "WhenOpened": "2025-07-09T15:10:00.861Z",
               "EditorCaption": ""
             }
           ]
