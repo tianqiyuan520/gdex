@@ -61,6 +61,22 @@
 
 最终摘要以“C# + RenderingDevice”为基线，输出其他路径的 CPU 准备加速比。名称明确标注语言边界、API 层级和 8MB 数据口径。
 
+每个模式还必须输出完整提交链路，避免只用 RD/RS 名称掩盖中间封装成本：
+
+1. C# + RD：`InstanceData[] → byte[] → RenderingDevice.TextureUpdate`。
+2. C# + RS：`InstanceData[] → byte[] → Image.SetData → ImageTexture.Update`。
+3. GDExtension + RD：`InstanceData* → PackedByteArray → RenderingDevice::texture_update`。
+4. GDExtension + RS：`InstanceData* → PackedByteArray → Image::set_data → ImageTexture::update`。
+
+最终摘要在四项原始数据之后输出四组成对比较：
+
+- C# 提交路径：RD 对 RS。
+- GDExtension 提交路径：RD 对 RS。
+- RD 语言边界：C# 对 GDExtension。
+- RS 语言边界：C# 对 GDExtension。
+
+每组成对比较同时显示左、右两项的填充、提交、CPU 准备和 CPU 总计，并以 CPU 准备计算右项相对左项的倍数与耗时变化百分比。百分比为正表示右项更快，为负表示右项更慢；除数为零时显示不可用。
+
 ## 错误处理
 
 - C# RenderingServer 紧凑纹理创建失败时打印错误并停止该节点，不静默回退到 32MB transform，以免破坏比较口径。
