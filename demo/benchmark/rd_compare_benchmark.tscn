@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=3 uid="uid://b6ucs3v6pvsps"]
+
+[ext_resource type="Script" uid="uid://bnjtxg0iud8jd" path="res://benchmark/RDCompareBenchmark.cs" id="1_controller"]
+[ext_resource type="Script" uid="uid://dan663h5js4hd" path="res://c_sharp/TestNodeRD.cs" id="2_rd"]
+[ext_resource type="Texture2D" uid="uid://ce3a11ytrld07" path="res://icon.svg" id="3_icon"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_0"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_0"]
+mesh = SubResource("QuadMesh_0")
+
+[sub_resource type="QuadMesh" id="QuadMesh_1"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_1"]
+mesh = SubResource("QuadMesh_1")
+
+[sub_resource type="QuadMesh" id="QuadMesh_2"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_2"]
+mesh = SubResource("QuadMesh_2")
+
+[node name="RDCompareBenchmark" type="Node2D"]
+script = ExtResource("1_controller")
+
+[node name="Benchmark0" type="Node2D" parent="."]
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("2_rd")
+
+[node name="RDSubmitBridge" type="RDSubmitBridge" parent="Benchmark0"]
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="Benchmark0"]
+multimesh = SubResource("MultiMesh_0")
+texture = ExtResource("3_icon")
+
+[node name="Benchmark1" type="Node2D" parent="."]
+process_mode = 4
+visible = false
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("2_rd")
+
+[node name="RDSubmitBridge" type="RDSubmitBridge" parent="Benchmark1"]
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="Benchmark1"]
+multimesh = SubResource("MultiMesh_1")
+texture = ExtResource("3_icon")
+
+[node name="Benchmark2" type="Node2D" parent="."]
+process_mode = 4
+visible = false
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("2_rd")
+
+[node name="RDSubmitBridge" type="RDSubmitBridge" parent="Benchmark2"]
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="Benchmark2"]
+multimesh = SubResource("MultiMesh_2")
+texture = ExtResource("3_icon")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="PanelContainer" parent="UI"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 980.0
+offset_bottom = 250.0
+
+[node name="Margin" type="MarginContainer" parent="UI/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel/Margin"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "RenderingDevice 顺序提交性能对比"
+
+[node name="Results" type="Label" parent="UI/Panel/Margin/VBox"]
+layout_mode = 2
+text = "等待测试……"

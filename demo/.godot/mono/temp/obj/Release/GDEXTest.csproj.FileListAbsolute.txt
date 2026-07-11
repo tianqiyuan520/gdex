@@ -1,0 +1,17 @@
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\bin\Release\GDEXTest.deps.json
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\bin\Release\GDEXTest.runtimeconfig.json
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\bin\Release\GDEXTest.dll
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\bin\Release\GDEXTest.pdb
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\bin\Release\GodotSharp.dll
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.csproj.AssemblyReference.cache
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.GeneratedMSBuildEditorConfig.editorconfig
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.AssemblyInfoInputs.cache
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.AssemblyInfo.cs
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.csproj.CoreCompileInputs.cache
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.csproj.Up2Date
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.dll
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\refint\GDEXTest.dll
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.pdb
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\GDEXTest.genruntimeconfig.cache
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\obj\Release\ref\GDEXTest.dll
+E:\GODOT\Project\gdex\demo\.godot\mono\temp\bin\Release\GodotSharpEditor.dll

@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=3 uid="uid://ci6b68fqcg6or"]
+
+[ext_resource type="Script" uid="uid://clmorl5w56mdb" path="res://benchmark/SequentialBenchmark.cs" id="1_controller"]
+[ext_resource type="Script" uid="uid://ccy3yi6f4kqqa" path="res://c_sharp/TestNodeNormal.cs" id="2_csharp"]
+[ext_resource type="Texture2D" uid="uid://ce3a11ytrld07" path="res://icon.svg" id="3_icon"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_cpp"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_cpp"]
+mesh = SubResource("QuadMesh_cpp")
+
+[sub_resource type="QuadMesh" id="QuadMesh_csharp"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_csharp"]
+mesh = SubResource("QuadMesh_csharp")
+
+[node name="SequentialBenchmark" type="Node2D"]
+script = ExtResource("1_controller")
+InstanceCount = 1000000
+
+[node name="CppBenchmark" type="GDExample" parent="."]
+IsUseBuffer = true
+MeshInstanceCount = 20000
+process_mode = 4
+visible = false
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="CppBenchmark"]
+multimesh = SubResource("MultiMesh_cpp")
+texture = ExtResource("3_icon")
+
+[node name="CSharpBenchmark" type="Node2D" parent="."]
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("2_csharp")
+UseNativePlugin = true
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="CSharpBenchmark"]
+multimesh = SubResource("MultiMesh_csharp")
+texture = ExtResource("3_icon")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="PanelContainer" parent="UI"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 760.0
+offset_bottom = 250.0
+
+[node name="Margin" type="MarginContainer" parent="UI/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel/Margin"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Sequential MultiMesh Benchmark: C# then C++"
+
+[node name="Results" type="Label" parent="UI/Panel/Margin/VBox"]
+layout_mode = 2
+text = "Waiting for benchmark..."

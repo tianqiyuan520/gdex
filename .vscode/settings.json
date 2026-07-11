@@ -1,6 +1,6 @@
 {
     "cmake.ignoreCMakeListsMissing": true,
-    "godotTools.editorPath.godot4": "d:\\godot\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
+    "godotTools.editorPath.godot4": "d:\\Godot\\GODOT\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
     "C_Cpp.dimInactiveRegions": false,
     "files.associations": {
         "*.cpp": "cpp",

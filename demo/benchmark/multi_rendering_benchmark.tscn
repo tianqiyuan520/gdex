@@ -1,0 +1,133 @@
+[gd_scene load_steps=17 format=3 uid="uid://hpesqfmtyfdq"]
+
+[ext_resource type="Script" uid="uid://bkxkii4tkm5ta" path="res://benchmark/MultiRenderingBenchmark.cs" id="1_controller"]
+[ext_resource type="Script" uid="uid://dan663h5js4hd" path="res://c_sharp/TestNodeRD.cs" id="2_rd"]
+[ext_resource type="Script" uid="uid://ccy3yi6f4kqqa" path="res://c_sharp/TestNodeNormal.cs" id="3_rs"]
+[ext_resource type="Texture2D" uid="uid://ce3a11ytrld07" path="res://icon.svg" id="4_icon"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_rd_csharp"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_rd_csharp"]
+mesh = SubResource("QuadMesh_rd_csharp")
+
+[sub_resource type="QuadMesh" id="QuadMesh_rd_gdextension"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_rd_gdextension"]
+mesh = SubResource("QuadMesh_rd_gdextension")
+
+[sub_resource type="QuadMesh" id="QuadMesh_rst"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_rst"]
+mesh = SubResource("QuadMesh_rst")
+
+[sub_resource type="QuadMesh" id="QuadMesh_rs_gdextension"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_rs_gdextension"]
+mesh = SubResource("QuadMesh_rs_gdextension")
+
+[sub_resource type="QuadMesh" id="QuadMesh_rs_cpp"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_rs_cpp"]
+mesh = SubResource("QuadMesh_rs_cpp")
+
+[sub_resource type="QuadMesh" id="QuadMesh_bridge"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_bridge"]
+mesh = SubResource("QuadMesh_bridge")
+
+[node name="MultiRenderingBenchmark" type="Node2D"]
+script = ExtResource("1_controller")
+
+[node name="RenderingDeviceCSharp" type="Node2D" parent="."]
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("2_rd")
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="RenderingDeviceCSharp"]
+multimesh = SubResource("MultiMesh_rd_csharp")
+texture = ExtResource("4_icon")
+
+[node name="RenderingDeviceGDExtension" type="Node2D" parent="."]
+process_mode = 4
+visible = false
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("2_rd")
+
+[node name="RDSubmitBridge" type="RDSubmitBridge" parent="RenderingDeviceGDExtension"]
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="RenderingDeviceGDExtension"]
+multimesh = SubResource("MultiMesh_rd_gdextension")
+texture = ExtResource("4_icon")
+
+[node name="RenderingServerCSharp" type="Node2D" parent="."]
+process_mode = 4
+visible = false
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("3_rs")
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="RenderingServerCSharp"]
+multimesh = SubResource("MultiMesh_rst")
+texture = ExtResource("4_icon")
+
+[node name="RenderingServerGDExtension" type="Node2D" parent="."]
+process_mode = 4
+visible = false
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("3_rs")
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="RenderingServerGDExtension"]
+multimesh = SubResource("MultiMesh_rs_gdextension")
+texture = ExtResource("4_icon")
+
+[node name="RenderingServerCpp" type="GDExample" parent="."]
+process_mode = 4
+visible = false
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="RenderingServerCpp"]
+multimesh = SubResource("MultiMesh_rs_cpp")
+texture = ExtResource("4_icon")
+
+[node name="RenderingServerBridge" type="GDExample" parent="."]
+process_mode = 4
+visible = false
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="RenderingServerBridge"]
+multimesh = SubResource("MultiMesh_bridge")
+texture = ExtResource("4_icon")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="PanelContainer" parent="UI"]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 1120.0
+offset_bottom = 260.0
+
+[node name="Margin" type="MarginContainer" parent="UI/Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 10
+
+[node name="VBox" type="VBoxContainer" parent="UI/Panel/Margin"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="UI/Panel/Margin/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "百万实例：C# / GDExtension × RenderingDevice / RenderingServer"
+
+[node name="Results" type="Label" parent="UI/Panel/Margin/VBox"]
+layout_mode = 2
+text = "等待测试……"

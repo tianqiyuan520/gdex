@@ -15,6 +15,7 @@ physics_interpolation_quality = 1
 [node name="Node" type="Node"]
 
 [node name="GDExample" type="GDExample" parent="."]
+IsUseBuffer = true
 MeshInstanceCount = 20000
 script = ExtResource("1_072jd")
 
@@ -25,6 +26,6 @@ texture = ExtResource("3_112p8")
 [node name="Button" type="Button" parent="."]
 offset_right = 59.0
 offset_bottom = 23.0
-text = "UseBuffer:OFF"
+text = "UseBuffer:ON"
 
 [connection signal="pressed" from="Button" to="GDExample" method="toggleBuffer"]

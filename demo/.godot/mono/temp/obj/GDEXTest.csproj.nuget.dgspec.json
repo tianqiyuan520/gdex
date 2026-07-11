@@ -1,23 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Godot\\Project\\gdex\\demo\\GDEXTest.csproj": {}
+    "E:\\GODOT\\Project\\gdex\\demo\\GDEXTest.csproj": {}
   },
   "projects": {
-    "D:\\Godot\\Project\\gdex\\demo\\GDEXTest.csproj": {
+    "E:\\GODOT\\Project\\gdex\\demo\\GDEXTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Godot\\Project\\gdex\\demo\\GDEXTest.csproj",
+        "projectUniqueName": "E:\\GODOT\\Project\\gdex\\demo\\GDEXTest.csproj",
         "projectName": "GDEXTest",
-        "projectPath": "D:\\Godot\\Project\\gdex\\demo\\GDEXTest.csproj",
+        "projectPath": "E:\\GODOT\\Project\\gdex\\demo\\GDEXTest.csproj",
         "packagesPath": "C:\\Users\\tianqiyuan520\\.nuget\\packages\\",
-        "outputPath": "D:\\Godot\\Project\\gdex\\demo\\.godot\\mono\\temp\\obj\\",
+        "outputPath": "E:\\GODOT\\Project\\gdex\\demo\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Users\\tianqiyuan520\\AppData\\Roaming\\Godot\\mono\\GodotNuGetFallbackFolder",
           "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\tianqiyuan520\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tianqiyuan520\\AppData\\Roaming\\NuGet\\config\\Godot.Offline.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,8 +28,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "D:\\Godot\\Project\\EntJoy\\EntJoy.SourceGenerator\\bin\\Debug": {},
-          "D:\\Godot\\Project\\EntJoy\\EntJoy\\bin\\Debug": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\tianqiyuan520\\.nuget\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -81,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

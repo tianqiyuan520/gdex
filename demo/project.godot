@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GDEXTest"
-run/main_scene="uid://uiqwuk5slaqx"
+run/main_scene="uid://hpesqfmtyfdq"
 config/features=PackedStringArray("4.4", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -34,7 +34,7 @@ movie_writer/disable_vsync=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/GdexToCS/plugin.cfg", "res://addons/MyGDEXcpp/plugin.cfg")
+enabled=PackedStringArray("res://addons/MyGDEXcpp/plugin.cfg")
 
 [input]
 

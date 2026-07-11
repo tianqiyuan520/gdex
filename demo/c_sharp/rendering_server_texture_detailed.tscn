@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://c_sharp/TestNodeRenderingServerTexture.cs" id="1_script"]
+[ext_resource type="Texture2D" path="res://icon.svg" id="2_icon"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_main"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_main"]
+mesh = SubResource("QuadMesh_main")
+
+[sub_resource type="QuadMesh" id="QuadMesh_bridge"]
+size = Vector2(1, 1)
+
+[sub_resource type="MultiMesh" id="MultiMesh_bridge"]
+mesh = SubResource("QuadMesh_bridge")
+
+[node name="RenderingServerTextureDetailed" type="Node2D"]
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("1_script")
+
+[node name="NativeBridge" type="GDExample" parent="."]
+process_mode = 4
+visible = false
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="NativeBridge"]
+multimesh = SubResource("MultiMesh_bridge")
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="."]
+multimesh = SubResource("MultiMesh_main")
+texture = ExtResource("2_icon")

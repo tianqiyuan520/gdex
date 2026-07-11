@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://pclxv0tm15ra"]
+
+[ext_resource type="Script" uid="uid://sbamplng5woq" path="res://c_sharp/TestNodeRenderingServer3DBRG.cs" id="1_script"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_bridge"]
+
+[sub_resource type="MultiMesh" id="MultiMesh_bridge"]
+mesh = SubResource("QuadMesh_bridge")
+
+[sub_resource type="BoxMesh" id="BoxMesh_instances"]
+size = Vector3(0.85, 0.85, 0.85)
+
+[sub_resource type="MultiMesh" id="MultiMesh_instances"]
+transform_format = 1
+mesh = SubResource("BoxMesh_instances")
+
+[node name="RenderingServer3DBRG" type="Node3D"]
+script = ExtResource("1_script")
+XHalfCount = 100
+ZHalfCount = 100
+
+[node name="NativeBridge" type="GDExample" parent="."]
+process_mode = 4
+visible = false
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="NativeBridge"]
+multimesh = SubResource("MultiMesh_bridge")
+
+[node name="MultiMeshInstance3D" type="MultiMeshInstance3D" parent="."]
+multimesh = SubResource("MultiMesh_instances")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+current = true
+fov = 52.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.819152, 0.451984, -0.353129, 0, 0.615662, 0.788011, 0.573576, -0.645501, 0.50432, 0, 0, 0)
+light_energy = 1.4
+shadow_enabled = true

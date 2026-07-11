@@ -1,6 +1,7 @@
 #include "register_types.h"
 
 #include "gdexample.h"
+#include "rd_submit_bridge.h"
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
@@ -13,6 +14,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 	}
 
 	ClassDB::register_class<GDExample>();
+	ClassDB::register_class<RDSubmitBridge>();
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {

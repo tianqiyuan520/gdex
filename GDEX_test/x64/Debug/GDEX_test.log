@@ -1,0 +1,325 @@
+﻿D:\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1129,5): warning MSB8027: 名为 object.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 godot-cpp\gen\src\classes\object.cpp, godot-cpp\src\core\object.cpp。
+D:\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(1129,5): warning MSB8027: 名为 register_types.cpp 的两个或更多文件将生成到同一位置的输出。这会导致错误的生成结果。   调用的文件是 godot-cpp\test\src\register_types.cpp, src\register_types.cpp。
+  a_star2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\a_star2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/a_star2d.hpp”: No such file or directory
+  a_star3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\a_star3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/a_star3d.hpp”: No such file or directory
+  a_star_grid2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\a_star_grid2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/a_star_grid2d.hpp”: No such file or directory
+  accept_dialog.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\accept_dialog.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/accept_dialog.hpp”: No such file or directory
+  aes_context.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\aes_context.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/aes_context.hpp”: No such file or directory
+  animatable_body2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animatable_body2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animatable_body2d.hpp”: No such file or directory
+  animatable_body3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animatable_body3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animatable_body3d.hpp”: No such file or directory
+  animated_sprite2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animated_sprite2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animated_sprite2d.hpp”: No such file or directory
+  animated_sprite3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animated_sprite3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animated_sprite3d.hpp”: No such file or directory
+  animated_texture.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animated_texture.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animated_texture.hpp”: No such file or directory
+  animation.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation.hpp”: No such file or directory
+  animation_library.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_library.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_library.hpp”: No such file or directory
+  animation_mixer.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_mixer.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_mixer.hpp”: No such file or directory
+  animation_node.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node.hpp”: No such file or directory
+  animation_node_add2.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_add2.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_add2.hpp”: No such file or directory
+  animation_node_add3.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_add3.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_add3.hpp”: No such file or directory
+  animation_node_animation.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_animation.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_animation.hpp”: No such file or directory
+  animation_node_blend2.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_blend2.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_blend2.hpp”: No such file or directory
+  animation_node_blend3.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_blend3.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_blend3.hpp”: No such file or directory
+  animation_node_blend_space1_d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_blend_space1_d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_blend_space1_d.hpp”: No such file or directory
+  正在生成代码...
+  正在编译...
+  animation_node_blend_space2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_blend_space2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_blend_space2d.hpp”: No such file or directory
+  animation_node_blend_tree.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_blend_tree.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_blend_tree.hpp”: No such file or directory
+  animation_node_extension.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_extension.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_extension.hpp”: No such file or directory
+  animation_node_one_shot.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_one_shot.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_one_shot.hpp”: No such file or directory
+  animation_node_output.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_output.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_output.hpp”: No such file or directory
+  animation_node_state_machine.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_state_machine.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_state_machine.hpp”: No such file or directory
+  animation_node_state_machine_playback.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_state_machine_playback.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_state_machine_playback.hpp”: No such file or directory
+  animation_node_state_machine_transition.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_state_machine_transition.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_state_machine_transition.hpp”: No such file or directory
+  animation_node_sub2.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_sub2.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_sub2.hpp”: No such file or directory
+  animation_node_sync.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_sync.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_sync.hpp”: No such file or directory
+  animation_node_time_scale.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_time_scale.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_time_scale.hpp”: No such file or directory
+  animation_node_time_seek.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_time_seek.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_time_seek.hpp”: No such file or directory
+  animation_node_transition.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_node_transition.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_node_transition.hpp”: No such file or directory
+  animation_player.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_player.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_player.hpp”: No such file or directory
+  animation_root_node.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_root_node.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_root_node.hpp”: No such file or directory
+  animation_tree.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\animation_tree.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/animation_tree.hpp”: No such file or directory
+  area2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\area2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/area2d.hpp”: No such file or directory
+  area3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\area3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/area3d.hpp”: No such file or directory
+  array_mesh.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\array_mesh.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/array_mesh.hpp”: No such file or directory
+  array_occluder3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\array_occluder3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/array_occluder3d.hpp”: No such file or directory
+  正在生成代码...
+  正在编译...
+  aspect_ratio_container.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\aspect_ratio_container.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/aspect_ratio_container.hpp”: No such file or directory
+  atlas_texture.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\atlas_texture.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/atlas_texture.hpp”: No such file or directory
+  audio_bus_layout.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_bus_layout.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_bus_layout.hpp”: No such file or directory
+  audio_effect.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect.hpp”: No such file or directory
+  audio_effect_amplify.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_amplify.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_amplify.hpp”: No such file or directory
+  audio_effect_band_limit_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_band_limit_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_band_limit_filter.hpp”: No such file or directory
+  audio_effect_band_pass_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_band_pass_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_band_pass_filter.hpp”: No such file or directory
+  audio_effect_capture.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_capture.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_capture.hpp”: No such file or directory
+  audio_effect_chorus.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_chorus.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_chorus.hpp”: No such file or directory
+  audio_effect_compressor.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_compressor.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_compressor.hpp”: No such file or directory
+  audio_effect_delay.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_delay.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_delay.hpp”: No such file or directory
+  audio_effect_distortion.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_distortion.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_distortion.hpp”: No such file or directory
+  audio_effect_eq.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_eq.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_eq.hpp”: No such file or directory
+  audio_effect_eq10.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_eq10.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_eq10.hpp”: No such file or directory
+  audio_effect_eq21.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_eq21.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_eq21.hpp”: No such file or directory
+  audio_effect_eq6.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_eq6.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_eq6.hpp”: No such file or directory
+  audio_effect_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_filter.hpp”: No such file or directory
+  audio_effect_hard_limiter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_hard_limiter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_hard_limiter.hpp”: No such file or directory
+  audio_effect_high_pass_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_high_pass_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_high_pass_filter.hpp”: No such file or directory
+  audio_effect_high_shelf_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_high_shelf_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_high_shelf_filter.hpp”: No such file or directory
+  正在生成代码...
+  正在编译...
+  audio_effect_instance.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_instance.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_instance.hpp”: No such file or directory
+  audio_effect_limiter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_limiter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_limiter.hpp”: No such file or directory
+  audio_effect_low_pass_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_low_pass_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_low_pass_filter.hpp”: No such file or directory
+  audio_effect_low_shelf_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_low_shelf_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_low_shelf_filter.hpp”: No such file or directory
+  audio_effect_notch_filter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_notch_filter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_notch_filter.hpp”: No such file or directory
+  audio_effect_panner.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_panner.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_panner.hpp”: No such file or directory
+  audio_effect_phaser.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_phaser.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_phaser.hpp”: No such file or directory
+  audio_effect_pitch_shift.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_pitch_shift.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_pitch_shift.hpp”: No such file or directory
+  audio_effect_record.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_record.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_record.hpp”: No such file or directory
+  audio_effect_reverb.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_reverb.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_reverb.hpp”: No such file or directory
+  audio_effect_spectrum_analyzer.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_spectrum_analyzer.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_spectrum_analyzer.hpp”: No such file or directory
+  audio_effect_spectrum_analyzer_instance.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_spectrum_analyzer_instance.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_spectrum_analyzer_instance.hpp”: No such file or directory
+  audio_effect_stereo_enhance.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_effect_stereo_enhance.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_effect_stereo_enhance.hpp”: No such file or directory
+  audio_listener2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_listener2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_listener2d.hpp”: No such file or directory
+  audio_listener3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_listener3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_listener3d.hpp”: No such file or directory
+  audio_sample.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_sample.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_sample.hpp”: No such file or directory
+  audio_sample_playback.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_sample_playback.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_sample_playback.hpp”: No such file or directory
+  audio_server.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_server.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_server.hpp”: No such file or directory
+  audio_stream.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream.hpp”: No such file or directory
+  audio_stream_generator.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_generator.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_generator.hpp”: No such file or directory
+  正在生成代码...
+  正在编译...
+  audio_stream_generator_playback.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_generator_playback.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_generator_playback.hpp”: No such file or directory
+  audio_stream_interactive.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_interactive.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_interactive.hpp”: No such file or directory
+  audio_stream_microphone.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_microphone.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_microphone.hpp”: No such file or directory
+  audio_stream_mp3.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_mp3.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_mp3.hpp”: No such file or directory
+  audio_stream_ogg_vorbis.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_ogg_vorbis.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_ogg_vorbis.hpp”: No such file or directory
+  audio_stream_playback.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playback.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playback.hpp”: No such file or directory
+  audio_stream_playback_interactive.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playback_interactive.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playback_interactive.hpp”: No such file or directory
+  audio_stream_playback_ogg_vorbis.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playback_ogg_vorbis.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playback_ogg_vorbis.hpp”: No such file or directory
+  audio_stream_playback_playlist.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playback_playlist.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playback_playlist.hpp”: No such file or directory
+  audio_stream_playback_polyphonic.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playback_polyphonic.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playback_polyphonic.hpp”: No such file or directory
+  audio_stream_playback_resampled.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playback_resampled.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playback_resampled.hpp”: No such file or directory
+  audio_stream_playback_synchronized.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playback_synchronized.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playback_synchronized.hpp”: No such file or directory
+  audio_stream_player.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_player.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_player.hpp”: No such file or directory
+  audio_stream_player2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_player2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_player2d.hpp”: No such file or directory
+  audio_stream_player3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_player3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_player3d.hpp”: No such file or directory
+  audio_stream_playlist.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_playlist.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_playlist.hpp”: No such file or directory
+  audio_stream_polyphonic.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_polyphonic.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_polyphonic.hpp”: No such file or directory
+  audio_stream_randomizer.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_randomizer.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_randomizer.hpp”: No such file or directory
+  audio_stream_synchronized.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_synchronized.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_synchronized.hpp”: No such file or directory
+  audio_stream_wav.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\audio_stream_wav.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/audio_stream_wav.hpp”: No such file or directory
+  正在生成代码...
+  正在编译...
+  back_buffer_copy.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\back_buffer_copy.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/back_buffer_copy.hpp”: No such file or directory
+  base_button.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\base_button.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/base_button.hpp”: No such file or directory
+  base_material3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\base_material3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/base_material3d.hpp”: No such file or directory
+  bit_map.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\bit_map.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/bit_map.hpp”: No such file or directory
+  bone2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\bone2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/bone2d.hpp”: No such file or directory
+  bone_attachment3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\bone_attachment3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/bone_attachment3d.hpp”: No such file or directory
+  bone_map.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\bone_map.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/bone_map.hpp”: No such file or directory
+  box_container.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\box_container.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/box_container.hpp”: No such file or directory
+  box_mesh.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\box_mesh.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/box_mesh.hpp”: No such file or directory
+  box_occluder3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\box_occluder3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/box_occluder3d.hpp”: No such file or directory
+  box_shape3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\box_shape3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/box_shape3d.hpp”: No such file or directory
+  button.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\button.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/button.hpp”: No such file or directory
+  button_group.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\button_group.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/button_group.hpp”: No such file or directory
+  callback_tweener.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\callback_tweener.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/callback_tweener.hpp”: No such file or directory
+  camera2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera2d.hpp”: No such file or directory
+  camera3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera3d.hpp”: No such file or directory
+  camera_attributes.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera_attributes.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera_attributes.hpp”: No such file or directory
+  camera_attributes_physical.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera_attributes_physical.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera_attributes_physical.hpp”: No such file or directory
+  camera_attributes_practical.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera_attributes_practical.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera_attributes_practical.hpp”: No such file or directory
+  camera_feed.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera_feed.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera_feed.hpp”: No such file or directory
+  正在生成代码...
+  正在编译...
+  camera_server.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera_server.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera_server.hpp”: No such file or directory
+  camera_texture.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\camera_texture.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/camera_texture.hpp”: No such file or directory
+  canvas_group.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\canvas_group.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/canvas_group.hpp”: No such file or directory
+  canvas_item.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\canvas_item.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/canvas_item.hpp”: No such file or directory
+  canvas_item_material.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\canvas_item_material.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/canvas_item_material.hpp”: No such file or directory
+  canvas_layer.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\canvas_layer.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/canvas_layer.hpp”: No such file or directory
+  canvas_modulate.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\canvas_modulate.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/canvas_modulate.hpp”: No such file or directory
+  canvas_texture.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\canvas_texture.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/canvas_texture.hpp”: No such file or directory
+  capsule_mesh.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\capsule_mesh.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/capsule_mesh.hpp”: No such file or directory
+  capsule_shape2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\capsule_shape2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/capsule_shape2d.hpp”: No such file or directory
+  capsule_shape3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\capsule_shape3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/capsule_shape3d.hpp”: No such file or directory
+  center_container.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\center_container.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/center_container.hpp”: No such file or directory
+  char_fx_transform.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\char_fx_transform.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/char_fx_transform.hpp”: No such file or directory
+  character_body2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\character_body2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/character_body2d.hpp”: No such file or directory
+  character_body3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\character_body3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/character_body3d.hpp”: No such file or directory
+  check_box.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\check_box.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/check_box.hpp”: No such file or directory
+  check_button.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\check_button.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/check_button.hpp”: No such file or directory
+  circle_shape2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\circle_shape2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/circle_shape2d.hpp”: No such file or directory
+  class_db_singleton.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\class_db_singleton.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/class_db_singleton.hpp”: No such file or directory
+  code_edit.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\code_edit.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/code_edit.hpp”: No such file or directory
+  正在生成代码...
+  正在编译...
+  code_highlighter.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\code_highlighter.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/code_highlighter.hpp”: No such file or directory
+  collision_object2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\collision_object2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/collision_object2d.hpp”: No such file or directory
+  collision_object3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\collision_object3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/collision_object3d.hpp”: No such file or directory
+  collision_polygon2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\collision_polygon2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/collision_polygon2d.hpp”: No such file or directory
+  collision_polygon3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\collision_polygon3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/collision_polygon3d.hpp”: No such file or directory
+  collision_shape2d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\collision_shape2d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/collision_shape2d.hpp”: No such file or directory
+  collision_shape3d.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\collision_shape3d.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/collision_shape3d.hpp”: No such file or directory
+  color_palette.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\color_palette.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/color_palette.hpp”: No such file or directory
+  color_picker.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\color_picker.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/color_picker.hpp”: No such file or directory
+  color_picker_button.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\color_picker_button.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/color_picker_button.hpp”: No such file or directory
+  color_rect.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\color_rect.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/color_rect.hpp”: No such file or directory
+  compositor.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\compositor.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/compositor.hpp”: No such file or directory
+  compositor_effect.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\compositor_effect.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/compositor_effect.hpp”: No such file or directory
+  compressed_cubemap.cpp
+E:\GODOT\Project\gdex\godot-cpp\gen\src\classes\compressed_cubemap.cpp(33,10): error C1083: 无法打开包括文件: “godot_cpp/classes/compressed_cubemap.hpp”: No such file or directory
+  compressed_cubemap_array.cpp

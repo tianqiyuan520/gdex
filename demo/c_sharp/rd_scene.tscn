@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://bsbcct4f0xvvw"]
+
+[ext_resource type="Texture2D" uid="uid://ce3a11ytrld07" path="res://icon.svg" id="1_7fcgb"]
+[ext_resource type="Script" uid="uid://dan663h5js4hd" path="res://c_sharp/TestNodeRD.cs" id="2_q7811"]
+[ext_resource type="Script" uid="uid://da3xd276iyt1" path="res://c_sharp/camera_move.cs" id="3_7fcgb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_ekud1"]
+size = Vector2(15, 15)
+
+[sub_resource type="MultiMesh" id="MultiMesh_7fcgb"]
+mesh = SubResource("QuadMesh_ekud1")
+physics_interpolation_quality = 1
+
+[node name="RDScene" type="Node"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(575, 327)
+script = ExtResource("3_7fcgb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.0243056
+anchor_right = 0.128473
+anchor_bottom = 0.0478395
+text = "show
+"
+metadata/_edit_use_anchors_ = true
+
+[node name="Node" type="Node2D" parent="." node_paths=PackedStringArray("Button")]
+position = Vector2(300, 150)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("2_q7811")
+Button = NodePath("../CanvasLayer/Button")
+InstanceCount = 1000000
+
+[node name="RDSubmitBridge" type="RDSubmitBridge" parent="Node"]
+
+[node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="Node"]
+multimesh = SubResource("MultiMesh_7fcgb")
+texture = ExtResource("1_7fcgb")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.338542
+anchor_top = 0.00925926
+anchor_right = 0.480903
+anchor_bottom = 0.134259
+text = "RD"
+metadata/_edit_use_anchors_ = true
